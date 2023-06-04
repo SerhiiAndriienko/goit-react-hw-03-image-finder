@@ -8,7 +8,6 @@ import LoadMoreButton from './LoadMoreButton/LoadMoreButton';
 
 const BASEURL =
   'https://pixabay.com/api/?key=35462061-8a52d4784631467a148110ba5&q=';
-// let feltchRequest = null;
 
 class App extends Component {
   state = {
@@ -50,7 +49,6 @@ class App extends Component {
         howManyImagesFound: response.data.totalHits,
       }));
     } catch (error) {
-      // Обработка ошибок при выполнении запроса
       console.error(error);
     } finally {
       this.setState({
@@ -80,7 +78,6 @@ class App extends Component {
         howManyImagesFound: response.data.totalHits,
       }));
     } catch (error) {
-      // Обработка ошибок при выполнении запроса
       console.error(error);
     } finally {
       this.setState({
@@ -105,8 +102,11 @@ class App extends Component {
             onClick={this.nextPage}
           ></ImageGallery>
 
-          {this.state.howManyImagesFound > 12 && (
+          {this.state.images &&
+          this.state.howManyImagesFound - this.state.images.length > 12 ? (
             <LoadMoreButton onClick={this.nextPage}></LoadMoreButton>
+          ) : (
+            ''
           )}
         </main>
       </div>

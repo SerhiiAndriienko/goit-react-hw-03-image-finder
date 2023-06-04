@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import css from './modal.module.css';
-import img from '../../01 The Ice Cream Shop @ Simpang Bedok [Singapore] (Large).JPG';
 
 export default class Modal extends Component {
   state = {
