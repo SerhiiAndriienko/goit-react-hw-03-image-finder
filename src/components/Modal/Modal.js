@@ -28,11 +28,7 @@ export default class Modal extends Component {
       this.state.showModal && (
         <div className={css.Overlay} onClick={this.props.onClose}>
           <div className={css.Modal}>
-            <img
-              src={this.props.image.largeImageURL}
-              alt="Modal Image"
-              width={'100%'}
-            />
+            <img src={this.props.image.largeImageURL} alt="" width={'100%'} />
           </div>
         </div>
       )
