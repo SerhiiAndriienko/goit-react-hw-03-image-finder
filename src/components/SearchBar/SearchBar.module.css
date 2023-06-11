@@ -42,4 +42,7 @@
   width: 150px;
   font-size: 18px;
   margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

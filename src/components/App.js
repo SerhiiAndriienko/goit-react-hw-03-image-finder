@@ -57,9 +57,9 @@ class App extends Component {
     }
   }
 
-  handleInputChange = value => {
-    this.setState({ searchQuery: value });
-  };
+  // handleInputChange = value => {
+  //   this.setState({ searchQuery: value });
+  // };
 
   nextPage = async () => {
     this.setState(prevState => ({ load: true, page: prevState.page + 1 }));
